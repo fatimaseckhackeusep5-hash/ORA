@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Playfair Display', 'Fraunces', Georgia, serif;
+  --font-display: 'Cinzel', 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-teranga-dark: #1A1009;
+  --color-teranga-brown: #2B180D;
+  --color-teranga-leather: #5A351D;
+  --color-teranga-ochre: #A76D32;
+  --color-teranga-gold: #D4A359;
+  --color-teranga-lightgold: #F3DFC2;
+  --color-teranga-sand: #F7F1E6;
+  --color-teranga-ivory: #FAF6F0;
+  --color-teranga-cream: #FFFDF9;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: #FAF6F0;
+  color: #1A1009;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Typography classes */
+.font-display {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', 'Fraunces', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59A58;
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: #A2682F;
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover {
+  background-color: #8D5624;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(162, 104, 47, 0.3);
+}
+
+.btn-dark {
+  background-color: #24150C;
+  color: #F8F2E9;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-dark:hover {
+  background-color: #382012;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(36, 21, 12, 0.35);
+}
+
+/* Product Card Interactions */
+.product-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 24, 13, 0.08);
+}
+
+.product-card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover img {
+  transform: scale(1.04);
+}

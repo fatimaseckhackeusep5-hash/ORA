@@ -1,0 +1,12 @@
+{
+  "title": "TERANGA — Chaussures Traditionnelles | L'héritage africain au bout des pieds",
+  "description": "Découvrez nos mocassins, sandales royales et babouches façonnés à la main par nos maîtres artisans au Sénégal. 100% cuir véritable.",
+  "language": "fr",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
